@@ -1,0 +1,16 @@
+[Unit]
+Description=OZZYLOGIK test task TCP server daemon
+After=network.target
+
+[Service]
+Type=simple
+User=ozzl_test
+UMask=0077
+EnvironmentFile=/etc/ozzl/test-olek-server/server.conf
+EnvironmentFile=-/etc/ozzl/test-olek-server/server.conf.d/*.conf
+ExecStart=/usr/share/ozzl/test-olek-server/start.sh
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

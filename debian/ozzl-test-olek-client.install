@@ -1,0 +1,2 @@
+etc/ozzl/test-olek-client/client.conf.default /etc/ozzl/test-olek-client/
+bin/ozzl-test-olek-client /usr/sbin

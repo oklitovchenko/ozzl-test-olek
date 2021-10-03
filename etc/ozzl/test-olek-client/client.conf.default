@@ -1,0 +1,26 @@
+[global]
+# OZZL_TEST_SRV_IP sets server IP address to connection
+# Default value is 127.0.0.1
+#OZZL_TEST_SRV_IP=
+
+# OZZL_TEST_SRV_PORT sets server TCP port to connection
+# Default value is 6006
+#OZZL_TEST_SRV_PORT=
+
+# OZZL_TEST_CONNTIMEOUT sets wait connection timeout
+# Default value is 1000
+#OZZL_TEST_CONNTIMEOUT=
+
+[request]
+# OZZL_TEST_REQUEST sets dequest double value
+# Default value is 1.5
+#OZZL_TEST_REQUEST=
+
+# OZZL_TEST_PROTOCOLVERSION sets protocol version fo TCP interraction
+# Default value is AAFF0001
+#OZZL_TEST_PROTOCOLVERSION=
+
+[rezult]
+# OZZL_TEST_FILE sets file to output
+# Default value is out-file.double
+#OZZL_TEST_FILE=

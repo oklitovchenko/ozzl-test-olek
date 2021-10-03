@@ -1,0 +1,8 @@
+tar-ignore = "*~"
+tar-ignore = "*.sw[op]"
+tar-ignore = ".*"
+tar-ignore = "./bin"
+tar-ignore = "./run"
+tar-ignore = "./build"
+tar-ignore = "./source/*/.qmake.stash"
+tar-ignore = "./source/server/Makefile"

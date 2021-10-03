@@ -1,0 +1,20 @@
+Source: ozzl-test-olek
+Section: free/misc
+Priority: extra
+Maintainer: Oleksii Klitovchenko <oleksi.klitovchenko@gmail.com>
+Build-Depends: debhelper, dh-systemd, gcc, build-essential,
+ qt5-default, procps
+Standards-Version: 4.1.4
+Homepage: https://github.org/oklitovchenko/ozzl-test-olek
+
+Package: ozzl-test-olek-server
+Architecture: any
+Conflicts: 
+Depends: 
+Description: Test task TCP server daemon
+
+Package: ozzl-test-olek-client
+Architecture: any
+Conflicts: 
+Depends: 
+Description: Test task TCP client

@@ -1,0 +1,8 @@
+/var/log/ozzl/test-olek-server/messages.log {
+    maxsize 50M
+    compress
+    delaycompress
+    missingok
+    notifempty
+    maxage 30
+}

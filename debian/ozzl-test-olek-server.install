@@ -1,0 +1,3 @@
+etc/ozzl/test-olek-server /etc/ozzl
+bin/ozzl-test-olekd /usr/sbin
+shell/server/* /usr/share/ozzl/test-olek-server
