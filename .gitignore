@@ -1,0 +1,11 @@
+*~
+*.sw[op]
+.idea/
+.vscode/
+bin/
+build/
+run/
+source/client/.qmake.stash
+source/client/Makefile
+source/server/.qmake.stash
+source/server/Makefile
