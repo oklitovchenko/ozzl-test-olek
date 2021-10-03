@@ -23,12 +23,15 @@ void OzzlTcpPeer::slotConnectToSrv()
         settings.value("global/OZZL_TEST_SRV_PORT", "6006").toString();
     QString timeout =
         settings.value("global/OZZL_TEST_CONNTIMEOUT", "1000").toString();
-    QString req =
-        settings.value("request/OZZL_TEST_REQUEST", "1.5").toString();
-    QString protoVer =
-        settings.value("request/OZZL_TEST_PROTOCOLVERSION", "AAFF0001").toString();
-    QString fileName =
-        settings.value("rezult/OZZL_TEST_FILE", "out-file.double").toString();
+    QString req = mpParser->value("request-value").isEmpty() ?
+        settings.value("request/OZZL_TEST_REQUEST", "1.5").toString() :
+        mpParser->value("request-value");
+    QString protoVer = mpParser->value("protocol-version").isEmpty() ?
+        settings.value("request/OZZL_TEST_PROTOCOLVERSION", "AAFF0001").toString() :
+        mpParser->value("protocol-version");
+    QString fileName = mpParser->value("output-file").isEmpty() ?
+        settings.value("rezult/OZZL_TEST_FILE", "out-file.double").toString() :
+        mpParser->value("output-file");
 
     bool ok;
     unsigned int hex = protoVer.toUInt(&ok, 16);

@@ -15,6 +15,18 @@ int main(int argc, char *argv[])
         {"c","config-file"},
         "Client configuration <file>.", "config file",
         "/etc/ozzl/test-olek-client/client.conf"});
+    parser.addOption({
+        {"r", "request-value"},
+        "Client request <value>.", "request value",
+        ""});
+    parser.addOption({
+        {"v", "protocol-version"},
+        "Client protocol <version> for TCP interaction.", "protocol version",
+        ""});
+    parser.addOption({
+        {"o", "output-file"},
+        "Client output <file>.", "output file",
+        ""});
     parser.process(QCoreApplication::arguments());
 
     OzzlTcpPeer p(&parser);
