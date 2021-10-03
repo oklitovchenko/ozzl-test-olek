@@ -5,8 +5,6 @@
 #include <QString>
 #include <QThread>
 
-#include <QDebug>
-
 OzzlTcpWorker::OzzlTcpWorker(qintptr socketDescriptor, QObject* pP)
     : QObject(pP)
 {
@@ -35,19 +33,10 @@ void OzzlTcpWorker::slotReqHandler()
     Protocol::Request request =
         *(Protocol::Request*)mpTcpSocket->read(sizeof(Protocol::Request)).data();
 
-    qDebug() << "ozzl test task: server: request from"
-        << mpTcpSocket->peerAddress().toString()
-        << ":" << mpTcpSocket->peerPort();
-    qDebug() << "   header (HEX) :"
-        << QByteArray::fromRawData((char*)&request.header, sizeof(Protocol::RequestHeader)).toHex();
-    qDebug() << "     body (HEX) :"
-        << QByteArray::fromRawData((char*)&request.request, sizeof(double)).toHex();
-
     /*
      *  UNEXPECTED PROTOCOL ERROR
      */
     if ( (request.header.protocolVersion & 0xFFFF0000) != 0xAAFF0000 ) {
-        qCritical() << "ozzl test task: server: unexpected protocol error";
         mpTcpSocket->close();
         return;
     }
@@ -97,7 +86,6 @@ void OzzlTcpWorker::slotReqHandler()
 
 bool OzzlTcpWorker::writeToSocket(QByteArray d)
 {
-    qDebug() << "ozzl test task: server: wite:" << d.toHex();
     if ( mpTcpSocket->state() == QAbstractSocket::ConnectedState ) {
         mpTcpSocket->write(d);
         return mpTcpSocket->waitForBytesWritten();

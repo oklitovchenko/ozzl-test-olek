@@ -9,8 +9,6 @@
 #include <QHostAddress>
 #include <QCoreApplication>
 
-#include <QDebug>
-
 int OzzlTcpServer::sighupFd[2] = {};
 int OzzlTcpServer::sigtermFd[2] = {};
 
