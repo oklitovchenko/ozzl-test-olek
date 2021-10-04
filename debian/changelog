@@ -1,3 +1,13 @@
+ozzl-test-olek (0.1.0) stable; urgency=low
+
+  * Add README.md content
+  * Add integration test
+  * Add additional command line arguments parsing
+  * Remove thread-unsafe debug output
+  * Add graceful shutdown implementation prototype
+
+ -- Oleksii Klitovchenko <oleksii.klitovchenko@gmail.com>  Mon, 04 Oct 2021 09:15:59 +0300
+
 ozzl-test-olek (0.0.1) unstable; urgency=low
 
   * Initial release.
