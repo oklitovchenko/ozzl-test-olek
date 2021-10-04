@@ -9,7 +9,7 @@ all:
 
 link: build
 
-build: clean server client
+build: clean server client test
 
 server:
 	cd source/server; qmake && $(MAKE)
@@ -18,6 +18,9 @@ client:
 	cd source/client; qmake && $(MAKE)
 
 test:
+	mkdir run || true
+	rm -f ./run/*
+	./test.sh
 
 clean:
 	rm -rf bin build run
