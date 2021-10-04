@@ -9,7 +9,7 @@ all:
 
 link: build
 
-build: clean server client test
+build: clean server client
 
 server:
 	cd source/server; qmake && $(MAKE)
